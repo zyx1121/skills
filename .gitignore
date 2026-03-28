@@ -26,3 +26,4 @@
 # Skills CLI tool & lock file (local tooling)
 skills/
 skills-lock.json
+.DS_Store

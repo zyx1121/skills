@@ -40,6 +40,21 @@ Stateful recurring task runner with report generation and history queries.
 - Subsequent runs: executes all tasks in order, saves reports to `~/.config/regression/reports/`
 - Report queries: "regression report", "last run results", "compare last two weeks"
 
+### `apple-mcp-dev`
+
+Playbook for building, debugging, and publishing Apple MCP servers.
+
+**Triggers:** "new MCP", "apple mcp", "AppleScript MCP", "build mcp server", or when working in any `apple-*-mcp` repo.
+
+**What it does:**
+- Complete project structure and boilerplate
+- AppleScript/JXA gotchas (reserved keywords, newlines, sandbox paths, data separators)
+- When to use AppleScript vs JXA
+- Observability pattern (preview tool for self-verification)
+- Development workflow and publishing checklist
+
+---
+
 ## MCP Servers
 
 Apple MCP servers that pair well with these skills (macOS only):
@@ -51,6 +66,7 @@ Apple MCP servers that pair well with these skills (macOS only):
 | [`@zyx1121/apple-mail-mcp`](https://github.com/zyx1121/apple-mail-mcp) | Apple Mail — read, search, send, delete messages |
 | [`@zyx1121/apple-music-mcp`](https://github.com/zyx1121/apple-music-mcp) | Apple Music — playback control |
 | [`@zyx1121/apple-contacts-mcp`](https://github.com/zyx1121/apple-contacts-mcp) | Apple Contacts — manage contacts |
+| [`@zyx1121/apple-powerpoint-mcp`](https://github.com/zyx1121/apple-powerpoint-mcp) | Microsoft PowerPoint — create, edit, export presentations |
 
 Install all as user-scoped MCP servers:
 
@@ -60,4 +76,5 @@ claude mcp add apple-reminders -s user -- npx @zyx1121/apple-reminders-mcp
 claude mcp add apple-mail -s user -- npx @zyx1121/apple-mail-mcp
 claude mcp add apple-music -s user -- npx @zyx1121/apple-music-mcp
 claude mcp add apple-contacts -s user -- npx @zyx1121/apple-contacts-mcp
+claude mcp add apple-powerpoint -s user -- npx @zyx1121/apple-powerpoint-mcp
 ```
